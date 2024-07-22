@@ -10,7 +10,7 @@ const Nav = () => {
   return (
     <nav className="w-full h-[10vh] bg-sky-100 border border-b-sky-200 flex items-center justify-between p-4">
       <svg
-        class="_8pSp-"
+        className="_8pSp- hover:scale-110"
         viewBox="0 0 559 825"
         height="49"
         width="34"
