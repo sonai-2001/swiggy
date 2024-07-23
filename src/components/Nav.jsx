@@ -43,7 +43,7 @@ const Nav = () => {
         <Link to="/cart"><li>
           <i class="ri-shopping-cart-line"></i>cart-0
         </li></Link>
-         <Link to="/"><li >{userName}</li></Link>
+         <Link to="/"><li className="text-orange-600">{userName}</li></Link>
       </ul>
     </nav>
   );
