@@ -37,10 +37,10 @@ const Nav = () => {
         </defs>
       </svg>
       <ul className="flex gap-5 ">
-       <Link to="/home"><li>Home</li></Link> 
-       <Link to="/about"><li>About</li></Link> 
-        <Link to="/contact"><li>Contact</li></Link>
-        <Link to="/cart"><li>
+       <Link to="/home"><li className="hover:text-red-400">Home</li></Link> 
+       <Link to="/about"><li className="hover:text-red-400">About</li></Link> 
+        <Link to="/contact"><li className="hover:text-red-400">Contact</li></Link>
+        <Link to="/cart"><li className="hover:text-red-400">
           <i class="ri-shopping-cart-line"></i>cart-0
         </li></Link>
          <Link to="/"><li className="text-orange-600">{userName}</li></Link>
