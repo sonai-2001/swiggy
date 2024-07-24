@@ -7,6 +7,8 @@ import Title from "./partials/Title";
 const Details = () => {
   const { id } = useParams();
   const [detail, setDetail] = useState(null);
+  const [indexed, setIndexed] = useState(null);
+
   const resDetail = useDetails(id);
   console.log(resDetail);
   console.log(id);
@@ -33,7 +35,16 @@ const Details = () => {
           {cuisines.join(",")} - {costForTwoMessage}
         </h3>
         <div className="accordians w-full p-2">
-          {itemCategory.map((category,index)=><Title category={category} key={index}/>)}
+          {itemCategory &&
+            itemCategory.map((category, index) => (
+              <Title
+                category={category}
+                id={index}
+                key={index}
+                open={index === indexed ? true : false}
+                setIndexed={setIndexed}
+              />
+            ))}
         </div>
       </div>
     </div>
