@@ -39,6 +39,8 @@ const Details = () => {
             itemCategory.map((category, index) => (
               <Title
                 category={category}
+                title={category?.card?.card?.title}
+                itemCards={category?.card?.card?.itemCards}
                 id={index}
                 key={index}
                 open={index === indexed ? true : false}
