@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import userContext from "../utils/userContext";
+import cartContext from "../utils/cartContext";
 
 const Nav = () => {
   
   const userInfo=useContext(userContext)
+  const {myCart}=useContext(cartContext)
+
   const {userName}=userInfo
   console.log(userName)
   return (
@@ -41,7 +44,7 @@ const Nav = () => {
        <Link to="/about"><li className="hover:text-red-400">About</li></Link> 
         <Link to="/contact"><li className="hover:text-red-400">Contact</li></Link>
         <Link to="/cart"><li className="hover:text-red-400">
-          <i class="ri-shopping-cart-line"></i>cart-0
+          <i class="ri-shopping-cart-line"></i>cart-{myCart.length}
         </li></Link>
          <Link to="/"><li className="text-orange-600">{userName}</li></Link>
       </ul>

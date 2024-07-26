@@ -7,6 +7,7 @@ import About from "../components/About.jsx";
 import Contact from "../components/Contact.jsx";
 import Cart from "../components/Cart.jsx";
 import Details from "../components/Details.jsx";
+import Payment from "../components/Payment.jsx";
 
 const router = createBrowserRouter([{
   path: "/",
@@ -35,6 +36,9 @@ const router = createBrowserRouter([{
     {
       path:"/details/:id",
       element:<Details/>
+    },{
+      path:"/payment",
+      element:<Payment/>
     }
   ],
 }]);
